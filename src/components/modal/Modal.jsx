@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import Spinner from '../loader/Loader';
 import './Modal.css';
 
 export default class Modal extends Component {
     render() {
+        const { img, alt, onHandleClick } = this.props;
         return (
-            <div className="Overlay" onClick={this.props.onHandleClick}>
-                {<Spinner /> && (
+            <>
+                <div className="Overlay" onClick={onHandleClick}>
                     <div className="Modal">
-                        <img src={this.props.img} alt={this.props.alt} />
+                        <img src={img} alt={alt} />
                     </div>
-                )}
-            </div>
+                </div>
+            </>
         );
     }
 }
