@@ -4,6 +4,7 @@ import Searchbar from '../searchbar/Searchbar';
 import ImagaGalleryItem from './imgagGalleryItem/ImagaGalleryItem';
 
 import articlesApi from '../../services/articlesApi';
+
 import Modal from '../modal/Modal';
 import Button from './button/Button';
 import StartPage from './StartPage';
@@ -24,7 +25,7 @@ class ImageGallery extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log('componentDidUpdate :');
+        // console.log('componentDidUpdate :');
         const prevQuery = prevState.searchQuery;
         const nextQuery = this.state.searchQuery;
 
